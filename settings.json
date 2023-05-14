@@ -1,0 +1,74 @@
+{
+    // --------------- THEME ----------------------
+    "workbench.colorTheme": "One Dark Pro Flat",
+    "workbench.iconTheme": "icons",
+    "terminal.integrated.fontFamily": "Liga SFMono Nerd Font, ",
+    "workbench.sideBar.location": "left",
+    "editor.minimap.enabled": false,
+    "editor.formatOnPaste": true,
+    "editor.fontFamily": "Liga SFMono Nerd Font",
+    "editor.tabSize": 2,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.revealIfOpen": true,
+    "editor.suggestSelection": "first",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.layoutControl.enabled": false,
+    "scm.diffDecorationsGutterAction": "none",
+    "scm.diffDecorationsGutterPattern": {
+    "modified": false
+    },
+    "scm.diffDecorationsGutterVisibility": "hover",
+    "testing.defaultGutterClickAction": "contextMenu",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "window.restoreWindows": "none",
+    "explorer.confirmDelete": false,
+    "workbench.editor.tabSizing": "shrink",
+    "editor.wordWrap": "on",
+    "explorer.confirmDragAndDrop": false,
+    "files.trimTrailingWhitespace": true,
+    "window.newWindowDimensions": "maximized",
+    "telemetry.telemetryLevel": "off",
+    "workbench.activityBar.visible": false,
+    "window.titleBarStyle": "custom",
+    "window.menuBarVisibility": "toggle",
+
+    // --------------- SCROLLBAR STUFF --------------------------
+    "editor.scrollbar.vertical": "auto",
+    "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true,
+
+    // --------------- PROGRAMMING LENGUAJES -----------------
+    // ---- HTML / CSS / JS / TS ----
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.validate": ["typescript"],
+    "editor.formatOnSave": true,
+    "window.zoomLevel": 1,
+    "dart.previewFlutterUiGuides": true,
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    "commandOnAllFiles.commands": {
+        "Format File": {
+            "command": "editor.action.formatDocument",
+            "includeFileExtensions": [
+                ".dart"
+            ]
+        },
+        "Flutter Stylizer": {
+            "command": "extension.flutterStylizer",
+            "includeFileExtensions": [
+                ".dart"
+            ]
+        }
+    },
+
+
+    // ------------------ GIT ---------------------------
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "oneDarkPro.bold": true,
+    "git.autofetch": true,
+
+
+}
