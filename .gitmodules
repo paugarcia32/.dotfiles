@@ -1,3 +1,6 @@
 [submodule "nvim"]
 	path = nvim
 	url = https://github.com/paugarcia32/nvim
+[submodule "firefox"]
+	path = firefox
+	url = https://github.com/paugarcia32/Firefox-Custom-Config
