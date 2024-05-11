@@ -1,34 +1,49 @@
-
-
 # Dotfiles
 
 
 Welcome to my dotfiles! Feel free to use whatevet you think it could be usefull to you configs!
 
 
-## Wezterm & starship
+## Wezterm & Starship
 
-![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/121baa7e-d79f-4b63-a60d-dcdb0ea0e1e0)
+Check out thr docs
+- [Wezterm](https://wezfurlong.org/wezterm/index.html)
+- [Starship](https://starship.rs/)
+
+
+<details>
+<summary>Nvim Light mode</summary>
+  
+![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/7c37262c-bd22-4651-84cb-4fa822a1fba0)
+</details>
+
+
+<details>
+<summary>Nvim Dark mode</summary>
+  
+![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/04b5bbcf-7cd2-405d-b132-fafc02b5eaa0)
+</details>
+
+
+
 
 
 ## NVIM
 
+Based in [lazy.nvim](https://github.com/folke/lazy.nvim) plugin
+
 <details>
-<summary>Nvim light mode</summary>
-
-![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/b1a1761a-f596-4adb-a152-48ca3188a3d1)
-
-![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/6e974369-2f05-46b5-a707-5a1d1d466bd2)
-
+<summary>Nvim Light mode</summary>
+  
+![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/5a798b29-5958-483d-9566-0fd0f4e221d3)
+![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/cbc64b4c-a44d-4a7e-b905-97318f895d41)
 </details>
 
 <details>
-<summary>Nvim dark mode</summary>
-
-![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/bd84ebc8-7aa2-4643-9424-264365508adb)
-
-![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/8ad7d064-ed58-486e-8a20-3204d069ece5)
-
+<summary>Nvim Dark mode</summary>
+  
+![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/06e22e16-d4f6-4989-b0b5-3d4c5256be10)
+![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/8f1121e3-f36e-42b6-89f6-dc409ecdee0f)
 </details>
 
 
@@ -37,19 +52,16 @@ Welcome to my dotfiles! Feel free to use whatevet you think it could be usefull 
 Download the ´settings.json´ file
 
 <details>
-<summary>VS Code light mode</summary>
-
-![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/95c19c3f-6493-4e07-aff3-66f4eef93418)
-
+<summary>VS Code Light mode</summary>
+  
+![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/2c0225a0-f863-465d-8eba-64bbaedd0e3e)
 </details>
 
 
 <details>
 <summary>VS Code Dark mode</summary>
-
-![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/72554ba2-fb90-4048-acdb-1e1df53fdd36)
-
-
+  
+![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/5c321d7c-1721-4d9f-b77c-b5845d5b0f58)
 </details>
 
 
@@ -60,3 +72,26 @@ Download the ´settings.json´ file
 
 
 
+
+## Firefox
+
+Change the following on your Firefox Config: `about:config toolkit.legacyUserProfileCustomizations.stylesheets`
+
+>[!Tip]
+>Firefox file paths: 
+> - Mac: ~/Library/Application Support/Firefox/Profiles/ 
+> - Windows: %appdata%\Mozilla\Firefox\Profiles\ 
+> - Linux: ~/.mozilla/firefox/
+
+<details>
+<summary>Firefox Light mode</summary>
+  
+![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/a521b928-4b80-4cc6-9389-6b09050d07de)
+</details>
+
+
+<details>
+<summary>Firefox Dark mode</summary>
+
+![imagen](https://github.com/paugarcia32/.dotfiles/assets/37461446/3aa3117d-bebc-4797-80d7-55d462e17f9d)
+</details>
