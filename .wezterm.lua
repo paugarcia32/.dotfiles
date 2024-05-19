@@ -20,8 +20,31 @@ config.launch_menu = {
 	{ label = "Nushell", args = { "nu" } },
 }
 
--- Settings
-config.color_scheme = "nordfox"
+function get_appearance()
+	if wezterm.gui then
+		return wezterm.gui.get_appearance()
+	end
+	return "Dark"
+end
+
+function scheme_for_appearance(appearance)
+	if appearance:find("Dark") then
+		return "nordfox"
+	else
+		-- return "nord-light"
+		return "Lunaria Light (Gogh)"
+	end
+end
+
+config.color_scheme = scheme_for_appearance(get_appearance())
+
+function scheme_for_colors(appearance)
+	if appearance:find("Dark") then
+		return "silver"
+	else
+		return "light"
+	end
+end
 
 config.font = wezterm.font_with_fallback({
 	"Liga SFMono Nerd Font",
@@ -89,7 +112,7 @@ for i = 1, 9 do
 	})
 end
 
-config.hide_tab_bar_if_only_one_tab = true
+-- config.hide_tab_bar_if_only_one_tab = true
 
 config.key_tables = {
 	resize_pane = {
