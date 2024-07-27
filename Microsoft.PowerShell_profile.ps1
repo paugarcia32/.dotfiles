@@ -33,7 +33,8 @@ new-alias dev gotoa
 
 # Define theme for dark mode
 $DarkTheme = @{
-    Command                  = $PSStyle.Foreground.FromRGB(0x00BFFF) # Light Blue
+    # Command                  = $PSStyle.Foreground.FromRGB(0x00BFFF) # Light Blue
+    Command                  = "$($PSStyle.Foreground.Yellow)$($PSStyle.Bold)"
     Comment                  = $PSStyle.Foreground.FromRGB(0x7CFC00) # Lawn Green
     ContinuationPrompt       = $PSStyle.Foreground.FromRGB(0x00BFFF)
     Default                  = $PSStyle.Foreground.FromRGB(0xFFFFFF) # White
@@ -55,10 +56,11 @@ $DarkTheme = @{
 
 # Define theme for light mode
 $LightTheme = @{
-    Command                  = $PSStyle.Foreground.FromRGB(0x00008B) # Dark Blue
+    #Command                  = $PSStyle.Foreground.FromRGB(0x00008B) # Dark Blue
+    Command                  = "$($PSStyle.Foreground.Cyan)$($PSStyle.Bold)"
     Comment                  = $PSStyle.Foreground.FromRGB(0x006400) # Dark Green
     ContinuationPrompt       = $PSStyle.Foreground.FromRGB(0x00008B)
-    Default                  = $PSStyle.Foreground.FromRGB(0x000000) # Black
+    Default                  = $PSStyle.Foreground.BrightBlack # Black
     Emphasis                 = $PSStyle.Foreground.FromRGB(0x8B0000) # Dark Red
     Error                    = $PSStyle.Foreground.FromRGB(0xB22222) # Firebrick
     InlinePrediction         = $PSStyle.Foreground.FromRGB(0x708090) # Slate Gray
