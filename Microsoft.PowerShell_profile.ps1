@@ -1,32 +1,25 @@
-#oh-my-posh init pwsh --config "C:\!Main\customs\custom_pwsh__theme.json"| Invoke-Expression
-
-
-if (Get-Command 'starship' -ErrorAction SilentlyContinue) {
-  function Invoke-Starship-PreCommand {
-    if ($global:profile_initialized -ne $true) {
-      $global:profile_initialized = $true
-      Initialize-Profile
-    }
-  }
-  Invoke-Expression (&starship init powershell)
-}
-
+#oh-my-posh init pwsh --config "C:\Users\pauga\SB\4. Archive\Templates\custom_pwsh__theme.json" | Invoke-Expression
+Invoke-Expression (&starship init powershell)
 Import-Module -Name Terminal-Icons
 
-$ENV:STARSHIP_CONFIG = "C:\!Main\customs\starship.toml"
+$ENV:STARSHIP_CONFIG = "C:\Users\pauga\dev\.dotfiles\starship.toml"
 
-
-
-$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-if (Test-Path($ChocolateyProfile)) {
-  Import-Module "$ChocolateyProfile"
+function Set-DevDirectory {
+    Set-Location "C:\Users\pauga\dev"
 }
 
+Set-Alias -Name dev -Value Set-DevDirectory
 
-function gotoa { set-location "E:/" }
-new-alias dev gotoa
+# ----------------- MAAT BACKEND CONFIG ----------------------
+$env:FIREBASE_PROJECT = "checkin-test-fba3d"
+$env:FIREBASE_TOKEN = "1//03Zpy1GCjoawICgYIARAAGAMSNwF-L9IrgLJ0-hoxLpHXFapkTojpTzlDAPUPPR1KkHpzlGJfGjfjUdGZjg2tCBgxKNBYU8xtPhU"
+$env:STRIPE_API_KEY ="sk_test_A0KGGHxZry45IVkE6FlKufq000mdILRJPW"
+$env:DEVICE_NAME = "pau"
+$env:FUNCTIONS_DISCOVERY_TIMEOUT = 50
+$env:SEED_AUTH_TIMEOUT = 150000
 
 
+# -------------------------------------------------------------
 
 
 
@@ -60,7 +53,7 @@ $LightTheme = @{
     Command                  = "$($PSStyle.Foreground.Cyan)$($PSStyle.Bold)"
     Comment                  = $PSStyle.Foreground.FromRGB(0x006400) # Dark Green
     ContinuationPrompt       = $PSStyle.Foreground.FromRGB(0x00008B)
-    Default                  = $PSStyle.Foreground.BrightBlack # Black
+    Default                  = $PSStyle.Foreground.FromRGB(0x000000) # Black
     Emphasis                 = $PSStyle.Foreground.FromRGB(0x8B0000) # Dark Red
     Error                    = $PSStyle.Foreground.FromRGB(0xB22222) # Firebrick
     InlinePrediction         = $PSStyle.Foreground.FromRGB(0x708090) # Slate Gray
@@ -76,6 +69,56 @@ $LightTheme = @{
     ListPredictionSelected   = $PSStyle.Background.FromRGB(0xD3D3D3) # Light Gray
     Selection                = $PSStyle.Background.FromRGB(0x87CEEB) # Sky Blue
 }
+
+
+
+# Define theme for Monokai Pro
+$MonokaiProTheme = @{
+    Command                  = "$($PSStyle.Foreground.FromRGB(0xA6E22E))$($PSStyle.Bold)" # Green
+    Comment                  = $PSStyle.Foreground.FromRGB(0x75715E) # Brownish gray
+    ContinuationPrompt       = $PSStyle.Foreground.FromRGB(0x66D9EF) # Cyan
+    Default                  = $PSStyle.Foreground.FromRGB(0xF8F8F2) # Off-white
+    Emphasis                 = $PSStyle.Foreground.FromRGB(0xF92672) # Pink
+    Error                    = $PSStyle.Foreground.FromRGB(0xFD971F) # Orange
+    InlinePrediction         = $PSStyle.Foreground.FromRGB(0xA6E22E) # Green
+    Keyword                  = $PSStyle.Foreground.FromRGB(0x66D9EF) # Cyan
+    ListPrediction           = $PSStyle.Foreground.FromRGB(0xA6E22E) # Green
+    Member                   = $PSStyle.Foreground.FromRGB(0xAE81FF) # Purple
+    Number                   = $PSStyle.Foreground.FromRGB(0xAE81FF) # Purple
+    Operator                 = $PSStyle.Foreground.FromRGB(0xF92672) # Pink
+    Parameter                = $PSStyle.Foreground.FromRGB(0xFD971F) # Orange
+    String                   = $PSStyle.Foreground.FromRGB(0xE6DB74) # Yellow
+    Type                     = $PSStyle.Foreground.FromRGB(0x66D9EF) # Cyan
+    Variable                 = $PSStyle.Foreground.FromRGB(0xA6E22E) # Green
+    ListPredictionSelected   = $PSStyle.Background.FromRGB(0x49483E) # Dark Gray
+    Selection                = $PSStyle.Background.FromRGB(0x75715E) # Brownish gray
+}
+
+# Define theme for Monokai Light Mode
+$MonokaiLightTheme = @{
+    Command                  = "$($PSStyle.Foreground.FromRGB(0x66D9EF))$($PSStyle.Bold)" # Light Blue
+    Comment                  = $PSStyle.Foreground.FromRGB(0x75715E) # Brownish Gray
+    ContinuationPrompt       = $PSStyle.Foreground.FromRGB(0xA6E22E) # Green
+    Default                  = $PSStyle.Foreground.FromRGB(0x272822) # Dark Gray (Readable on light background)
+    Emphasis                 = $PSStyle.Foreground.FromRGB(0xF92672) # Pink
+    Error                    = $PSStyle.Foreground.FromRGB(0xFD971F) # Orange
+    InlinePrediction         = $PSStyle.Foreground.FromRGB(0xAE81FF) # Purple
+    Keyword                  = $PSStyle.Foreground.FromRGB(0x66D9EF) # Light Blue
+    ListPrediction           = $PSStyle.Foreground.FromRGB(0xA6E22E) # Green
+    Member                   = $PSStyle.Foreground.FromRGB(0xAE81FF) # Purple
+    Number                   = $PSStyle.Foreground.FromRGB(0xF92672) # Pink
+    Operator                 = $PSStyle.Foreground.FromRGB(0xF92672) # Pink
+    Parameter                = $PSStyle.Foreground.FromRGB(0xFD971F) # Orange
+    String                   = $PSStyle.Foreground.FromRGB(0xE6DB74) # Yellow
+    Type                     = $PSStyle.Foreground.FromRGB(0x66D9EF) # Light Blue
+    Variable                 = $PSStyle.Foreground.FromRGB(0xA6E22E) # Green
+    ListPredictionSelected   = $PSStyle.Background.FromRGB(0xE6E6E6) # Light Gray
+    Selection                = $PSStyle.Background.FromRGB(0xF8F8F2) # Off-White
+}
+
+
+
+
 
 # Function to switch theme
 function Set-Theme ($Theme) {
@@ -94,7 +137,7 @@ function Get-SystemTheme {
 
 # Set theme based on system theme
 if (Get-SystemTheme) {
-    Set-Theme -Theme $DarkTheme
+    Set-Theme -Theme $MonokaiProTheme
 } else {
-    Set-Theme -Theme $LightTheme
+    Set-Theme -Theme $MonokaiLightTheme
 }
